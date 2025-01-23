@@ -1,8 +1,2 @@
-
-/app/.env
-
-
+app/.env
 venv/
-
-
-!app/*
