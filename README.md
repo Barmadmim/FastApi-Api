@@ -404,7 +404,7 @@ La API utiliza tokens JWT para autenticar a los usuarios. Los tokens se deben en
 
 ## Requisitos
 
-- Python 3.8+
+- Python 3.12.6
 - FastAPI
 - PostgreSQL
 - JWT Authentication
@@ -416,7 +416,7 @@ La API utiliza tokens JWT para autenticar a los usuarios. Los tokens se deben en
 1. Clona el repositorio.
 2. Crea un entorno virtual e instálalo con `pip install -r requirements.txt`.
 3. Configura las variables de entorno para la base de datos y JWT.
-4. Ejecuta el servidor con `uvicorn main:app --reload`.
+4. Ejecuta el servidor con `uvicorn app.main:app --reload`.
 
 --- 
 
