@@ -1,8 +1,8 @@
 
 
-# API de Autenticación de Usuarios
+# API de la Aplicacion MicLing `0.0.1`
 
-Esta es una API para gestionar el registro, inicio de sesión, refresco de tokens, y la obtención de datos relacionados con los usuarios. Permite la autenticación mediante tokens JWT y ofrece endpoints para la gestión de exámenes, audios, cursos y la información de usuario.
+
 
 ## Endpoints
 
