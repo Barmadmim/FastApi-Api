@@ -46,19 +46,6 @@ Endpoint para registrar un nuevo usuario.
   ```json
   "string"
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 2. Login de Usuario
@@ -80,19 +67,6 @@ Endpoint para autenticar un usuario y generar un token de acceso.
   ```json
   "string"
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 3. Refrescar el Token de Acceso
@@ -109,19 +83,6 @@ Endpoint para refrescar el token de acceso.
   ```json
   "string"
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 4. Obtener Exámenes del Usuario
@@ -203,19 +164,6 @@ Endpoint para crear un nuevo examen.
     "creation_date": "2025-01-23T23:32:57.541Z"
   }
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 6. Obtener Todos los Exámenes
@@ -266,19 +214,6 @@ Endpoint para comparar dos audios.
   ```json
   "string"
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 8. Obtener Contenido por Idioma
@@ -333,19 +268,6 @@ Obtiene los datos del usuario autenticado según el token de acceso.
     "photo": "string"
   }
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ### 10. Actualizar Cursos del Usuario
@@ -381,19 +303,6 @@ Actualiza los cursos del usuario autenticado.
     "photo": "string"
   }
   ```
-- **422 Unprocessable Entity**: Error de validación.
-  ```json
-  {
-    "detail": [
-      {
-        "loc": ["string", 0],
-        "msg": "string",
-        "type": "string"
-      }
-    ]
-  }
-  ```
-
 ---
 
 ## Autenticación y Seguridad
@@ -422,5 +331,4 @@ La API utiliza tokens JWT para autenticar a los usuarios. Los tokens se deben en
 
 ## Licencia
 
-Este proyecto está bajo la Licencia MIT.
-```
+Este proyecto está bajo la Licencia Apache-2.0 license.
