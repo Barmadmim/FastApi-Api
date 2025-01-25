@@ -4,7 +4,7 @@ from pydantic import BaseModel
 from datetime import datetime
 from typing import Optional
 
-class ExamenSchema(BaseModel):
+class ExamSchema(BaseModel):
     exam_type: str
     res_1: float
     res_2: float
@@ -18,7 +18,7 @@ class ExamenSchema(BaseModel):
     res_10: float
     total_percentage: float
 
-class ExamenResponse(ExamenSchema):
+class ExamResponse(ExamSchema):
     id_examen: int
     user_uid: int
     user_name: str

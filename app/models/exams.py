@@ -3,7 +3,7 @@ from sqlalchemy.orm import relationship
 from app.core.database import Base
 from datetime import datetime
 
-class ExamenModel(Base):
+class ExamModel(Base):
     __tablename__ = "examenes"
     
     id_examen = Column(Integer, primary_key=True, index=True)

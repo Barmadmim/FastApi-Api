@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from app.routes.audios import audios_router
 from app.routes.auth import auth_router
 from app.routes.examenes import examenes_router
-from app.routes.language import language_router
+from app.routes.course import course_router
 from app.routes.userme import userme_router
 from app.core.middlewares import JWTMiddleware
 from app.core.database import async_engine, Base
@@ -17,6 +17,7 @@ app = FastAPI(
 
 # Configuración de los orígenes permitidos para CORS
 # pg_ctl -D "C:\Program Files\PostgreSQL\17\data" start
+# psql -U postgres
 origins = [
     "http://localhost:8100",
     "http://127.0.0.1:8100",
@@ -44,7 +45,7 @@ app.add_middleware(JWTMiddleware)
 app.include_router(auth_router)
 app.include_router(examenes_router)
 app.include_router(audios_router)
-app.include_router(language_router)
+app.include_router(course_router)
 app.include_router(userme_router)
 
 
@@ -59,7 +60,7 @@ async def startup():
     async with async_engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
 
-    print("Base de datos conectada y tablas creadas")
+    print("Base de datos conectada")
 
 
 # Ruta principal para verificar el funcionamiento del servidor
