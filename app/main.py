@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.routes.audios import audios_router
 from app.routes.auth import auth_router
-from app.routes.examenes import examenes_router
+from app.routes.exams import exams_router
 from app.routes.course import course_router
 from app.routes.userme import userme_router
 from app.core.middlewares import JWTMiddleware
@@ -43,7 +43,7 @@ app.add_middleware(JWTMiddleware)
 
 # Incluir routers para las distintas secciones de la app
 app.include_router(auth_router)
-app.include_router(examenes_router)
+app.include_router(exams_router)
 app.include_router(audios_router)
 app.include_router(course_router)
 app.include_router(userme_router)
