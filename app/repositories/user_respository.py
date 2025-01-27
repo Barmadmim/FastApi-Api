@@ -103,8 +103,8 @@ async def create_user(register_request: RegisterRequest, response: Response, db:
         key="access_token", 
         value=access_token, 
         httponly=True,
-        secure=False,  # Usar secure=True en producción con HTTPS
-        samesite="Strict"
+        secure=True,  # Usar secure=True en producción con HTTPS
+        samesite="None"
     )
 
     # Establecer el refresh_token en las cookies
@@ -112,8 +112,8 @@ async def create_user(register_request: RegisterRequest, response: Response, db:
         key="refresh_token", 
         value=refresh_token, 
         httponly=True,
-        secure=False,  # Usar secure=True en producción con HTTPS
-        samesite="Strict"
+        secure=True,  # Usar secure=True en producción con HTTPS
+        samesite="None"
     )
     
     return {
@@ -158,8 +158,8 @@ async def authenticate_user(login_request: LoginRequest, response: Response, db:
     await db.commit()
 
     # Establecer cookies
-    response.set_cookie(key="access_token", value=access_token, httponly=True, secure=False, samesite="Strict")
-    response.set_cookie(key="refresh_token", value=refresh_token, httponly=True, secure=False, samesite="Strict")
+    response.set_cookie(key="access_token", value=access_token, httponly=True, secure=True, samesite="None")
+    response.set_cookie(key="refresh_token", value=refresh_token, httponly=True, secure=True, samesite="None")
 
     return {
         "access_token": access_token, 

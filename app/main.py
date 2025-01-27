@@ -19,10 +19,9 @@ app = FastAPI(
 # pg_ctl -D "C:\Program Files\PostgreSQL\17\data" start
 # psql -U postgres
 origins = [
-    "http://localhost:8100",
-    "http://127.0.0.1:8100",
+    "https://x89xntx3-3000.use2.devtunnels.ms",
     "http://localhost:8000",
-    "http://127.0.0.1:8000",
+    "http://localhost:3000",
     "https://x89xntx3-8000.use2.devtunnels.ms",
     "exp://192.168.1.104:8082",
     "https://micling.com",
