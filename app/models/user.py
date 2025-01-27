@@ -12,7 +12,7 @@ Base = declarative_base()
 # Definición del Enum para el rol
 class RoleEnum(enum.Enum):
     admin = "admin"
-    usuario = "usuario"
+    user = "user"
 
 # Creación de la clase User
 class User(Base):
@@ -23,7 +23,7 @@ class User(Base):
     last_name = Column(String, nullable=False)
     password = Column(String, nullable=False)
     phone_number = Column(String, nullable=True)
-    rol = Column(Enum(RoleEnum), default=RoleEnum.usuario)
+    rol = Column(Enum(RoleEnum), default=RoleEnum.user)
     gender = Column(String, nullable=True)
     institucion = Column(String, nullable=True)
     grade = Column(String, nullable=True)
