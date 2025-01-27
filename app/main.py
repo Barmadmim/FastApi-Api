@@ -66,3 +66,9 @@ async def startup():
 @app.get("/", tags=["home"])
 def home():
     return {"message": "Servidor corriendo"}
+
+
+#Ruta /head para soportar el método HEAD
+@app.head("/head", tags=["home"])
+def head_route():
+    return {"message": "Esta es una respuesta de HEAD, no se debe retornar cuerpo"}
